@@ -2,36 +2,35 @@ public class Zoo {
     Animal[] animals;
     String name;
     String city;
-    int nbrCages;
+    static final int NBRCAGES = 25;
     int animalCount;
 
     public Zoo() {
-        animals = new Animal[25];
+        animals = new Animal[NBRCAGES];
         animalCount = 0;
 
     }
 
-    public Zoo(String name,String city,int nbrCages) {
+    public Zoo(String name,String city) {
         this.name = name;
         this.city = city;
-        this.animals = new Animal[25];
-        this.nbrCages = nbrCages;
+        this.animals = new Animal[NBRCAGES];
         animalCount = 0;
 
     }
 
     public void displayZoo(){
         System.out.println("Zoo name: " + this.name + "\n" + "ville: " + this.city + "\n"
-                + "nbr cages: " + this.nbrCages);
+                + "nbr cages: " + NBRCAGES);
     }
 
     @Override
     public String toString() {
-        return "zoo: name: " + name + ", city: " + city + ", nbr cages: " + nbrCages;
+        return "zoo: name: " + name + ", city: " + city + ", nbr cages: " + NBRCAGES;
     }
 
     public boolean addAnimal(Animal animal){
-        if(animalCount >= nbrCages){
+        if(animalCount >= NBRCAGES){
             System.out.println("Zoo over");
             return false;
         }

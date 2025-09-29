@@ -4,5 +4,7 @@ public class Main {
         Animal lion = new Animal("pretador","simba",4,true);
         Zoo myZoo= new Zoo("Zoo de tunis","tunis",20);
 
+        Animal elephant = new Animal("Dumbo", "éléphant", 10,true);
+        Animal girafe  = new Animal("Herbivore", "Girafe", 10, true);
     }
 }

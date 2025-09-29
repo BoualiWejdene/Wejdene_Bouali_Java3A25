@@ -17,6 +17,11 @@ public class Zoo {
 
     }
 
+    public void displayZoo(){
+        System.out.println("Zoo name: " + this.name + "\n" + "ville: " + this.city + "\n"
+                + "nbr cages: " + this.nbrCages);
+    }
+
 
 
 }

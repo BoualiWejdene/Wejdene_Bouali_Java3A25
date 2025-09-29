@@ -6,5 +6,10 @@ public class Main {
 
         Animal elephant = new Animal("Dumbo", "éléphant", 10,true);
         Animal girafe  = new Animal("Herbivore", "Girafe", 10, true);
+
+        myZoo.displayZoo();
+        System.out.println(myZoo);
+        System.out.println(myZoo.toString());
+
     }
 }

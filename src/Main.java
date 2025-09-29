@@ -19,6 +19,10 @@ public class Main {
         System.out.println(myZoo.addAnimal(lion));
         System.out.println(myZoo.addAnimal(lion));
 
-
+        myZoo.displayAnimals();
+        System.out.println(myZoo.searchAnimal(lion));
+        Animal lion2 = new Animal("pretador","simba",4,true);
+        System.out.println(myZoo.addAnimal(lion2));
+        System.out.println(myZoo.searchAnimal(lion2));
     }
 }

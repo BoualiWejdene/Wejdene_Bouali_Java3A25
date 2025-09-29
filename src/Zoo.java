@@ -40,4 +40,19 @@ public class Zoo {
         }
     }
 
+    public void displayAnimals(){
+        for(int i = 0; i < animalCount; i++){
+            System.out.println(animals[i]);
+        }
+    }
+
+    public int searchAnimal(Animal animal){
+        for(int i = 0; i < animalCount; i++){
+            if(animals[i].name.equals(animal.name)){
+                return i;
+            }
+        }
+        return -1;
+    }
+
 }

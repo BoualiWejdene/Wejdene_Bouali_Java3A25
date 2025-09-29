@@ -15,9 +15,8 @@ public class Main {
 
         System.out.println(myZoo.addAnimal(lion));
         System.out.println(myZoo.addAnimal(elephant));
-        System.out.println(myZoo.addAnimal(girafe));
         System.out.println(myZoo.addAnimal(lion));
-        System.out.println(myZoo.addAnimal(lion));
+
 
         myZoo.displayAnimals();
         System.out.println(myZoo.searchAnimal(lion));
@@ -26,6 +25,8 @@ public class Main {
         System.out.println(myZoo.searchAnimal(lion2));
 
         System.out.println(myZoo.removeAnimal(lion));
+        System.out.println(myZoo.addAnimal(girafe));
+        myZoo.isZooFull();
 
     }
 }

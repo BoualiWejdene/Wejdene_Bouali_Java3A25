@@ -2,7 +2,7 @@ public class Zoo {
     Animal[] animals;
     String name;
     String city;
-    static final int NBRCAGES = 25;
+    static final int NBRCAGES = 1;
     int animalCount;
 
     public Zoo() {
@@ -76,6 +76,16 @@ public class Zoo {
             }
         }
         return false;
+    }
+
+    public boolean isZooFull(){
+        if(animalCount >= NBRCAGES){
+            System.out.println("Zoo full");
+            return true;
+        }else{
+            System.out.println("zoo not full ");
+            return false;
+        }
     }
 
 

@@ -13,6 +13,12 @@ public class Main {
 
         System.out.println(lion);
 
+        System.out.println(myZoo.addAnimal(lion));
+        System.out.println(myZoo.addAnimal(elephant));
+        System.out.println(myZoo.addAnimal(girafe));
+        System.out.println(myZoo.addAnimal(lion));
+        System.out.println(myZoo.addAnimal(lion));
+
 
     }
 }

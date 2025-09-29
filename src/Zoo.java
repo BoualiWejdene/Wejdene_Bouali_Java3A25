@@ -3,9 +3,11 @@ public class Zoo {
     String name;
     String city;
     int nbrCages;
+    int animalCount;
 
     public Zoo() {
         animals = new Animal[25];
+        animalCount = 0;
 
     }
 
@@ -14,6 +16,7 @@ public class Zoo {
         this.city = city;
         this.animals = new Animal[25];
         this.nbrCages = nbrCages;
+        animalCount = 0;
 
     }
 
@@ -27,6 +30,14 @@ public class Zoo {
         return "zoo: name: " + name + ", city: " + city + ", nbr cages: " + nbrCages;
     }
 
-
+    public boolean addAnimal(Animal animal){
+        if(animalCount < animals.length){
+            animals[animalCount] = animal;
+            animalCount++;
+            return true;
+        }else{
+            return false;
+        }
+    }
 
 }

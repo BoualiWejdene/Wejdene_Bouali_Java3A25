@@ -24,5 +24,8 @@ public class Main {
         Animal lion2 = new Animal("pretador","simba",4,true);
         System.out.println(myZoo.addAnimal(lion2));
         System.out.println(myZoo.searchAnimal(lion2));
+
+        System.out.println(myZoo.removeAnimal(lion));
+
     }
 }

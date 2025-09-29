@@ -63,4 +63,21 @@ public class Zoo {
         return -1;
     }
 
+    public boolean removeAnimal(Animal animal){
+        for (int i = 0; i < animalCount; i++) {
+            if(animals[i].equals(animal)){
+                for (int j = i; j <animalCount -1  ; j++) {
+                    animals[j] = animals[j+1];
+
+                }
+                animals[animalCount-1] = null;
+                animalCount--;
+                System.out.println("animal supprimé du zoo");
+                return true;
+            }
+        }
+        return false;
+    }
+
+
 }

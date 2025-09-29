@@ -3,6 +3,7 @@ public class Main {
 
         Animal lion = new Animal("pretador","simba",4,true);
         Zoo myZoo= new Zoo("Zoo de tunis","tunis");
+        Zoo zoo2 = new Zoo("Zoo de sousse", "Sousse");
 
         Animal elephant = new Animal("Dumbo", "éléphant", 10,true);
         Animal girafe  = new Animal("Herbivore", "Girafe", 10, true);
@@ -27,6 +28,10 @@ public class Main {
         System.out.println(myZoo.removeAnimal(lion));
         System.out.println(myZoo.addAnimal(girafe));
         myZoo.isZooFull();
+
+        System.out.println(zoo2.addAnimal(girafe));
+
+        System.out.println("Zoo avec le plus d'animaux: " + myZoo.comparerZoo(myZoo,zoo2));
 
     }
 }

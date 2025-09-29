@@ -88,5 +88,11 @@ public class Zoo {
         }
     }
 
-
+    public Zoo comparerZoo(Zoo z1, Zoo z2){
+        if(z1.animalCount >= z2.animalCount){
+            return z1;
+        }else{
+            return z2;
+        }
+    }
 }

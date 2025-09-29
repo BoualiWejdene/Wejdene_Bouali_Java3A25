@@ -22,6 +22,11 @@ public class Zoo {
                 + "nbr cages: " + this.nbrCages);
     }
 
+    @Override
+    public String toString() {
+        return "zoo: name: " + name + ", city: " + city + ", nbr cages: " + nbrCages;
+    }
+
 
 
 }

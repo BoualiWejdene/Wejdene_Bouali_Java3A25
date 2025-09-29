@@ -11,5 +11,8 @@ public class Main {
         System.out.println(myZoo);
         System.out.println(myZoo.toString());
 
+        System.out.println(lion);
+
+
     }
 }

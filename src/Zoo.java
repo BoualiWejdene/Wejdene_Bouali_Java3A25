@@ -31,13 +31,21 @@ public class Zoo {
     }
 
     public boolean addAnimal(Animal animal){
-        if(animalCount < animals.length){
-            animals[animalCount] = animal;
-            animalCount++;
-            return true;
-        }else{
+        if(animalCount >= nbrCages){
+            System.out.println("Zoo over");
             return false;
         }
+
+        for(int i = 0; i < animalCount; i++){
+            if(animals[i].name.equals(animal.name)){
+                System.out.println("cet animal existe déjà");
+                return false;
+            }
+        }
+        animals[animalCount] = animal;
+        animalCount++;
+        System.out.println("animal ajouté au zoo");
+        return true;
     }
 
     public void displayAnimals(){

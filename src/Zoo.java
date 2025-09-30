@@ -73,6 +73,10 @@ public class Zoo {
         return true;
     }
 
+    public boolean isZooFull(){
+        return comptAnimaux >= NBR_CAGES;
+    }
+
 
 
 

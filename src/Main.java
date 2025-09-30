@@ -30,6 +30,9 @@ public class Main {
         System.out.println(myZoo.removeAnimal(lion));
         myZoo.displayAnimals();
 
+        //Instruction 15
+        System.out.println(myZoo.isZooFull());
+
 
     }
 }

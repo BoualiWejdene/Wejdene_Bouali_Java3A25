@@ -17,6 +17,12 @@ public class Main {
         System.out.println(myZoo.addAnimal(girafe));
         System.out.println(myZoo.addAnimal(elephant));
 
+        //Instruction 11
+        myZoo.displayAnimals();
+        System.out.println(myZoo.searchAnimal(girafe));
+        Animal girafe2  = new Animal("Herbivore", "Girafe", 10, true);
+        System.out.println(myZoo.searchAnimal(girafe2));
+
 
 
     }

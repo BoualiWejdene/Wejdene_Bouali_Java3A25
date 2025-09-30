@@ -1,22 +1,57 @@
 public class Zoo {
-    Animal[] animals;
-    String name;
-    String city;
+    private Animal[] animals;
+    private String name;
+    private String city;
     static final int NBR_CAGES = 25;
-    int comptAnimaux;
+    private int comptAnimaux;
 
     public Zoo() {
-        animals = new Animal[25];
+        animals = new Animal[NBR_CAGES];
 
     }
 
     public Zoo(String name,String city) {
-        this.name = name;
+        if (! name.isEmpty()){
+            this.name = name;
+        }else {
+            this.name = "ZooNom";
+        }
         this.city = city;
         this.animals = new Animal[NBR_CAGES];
-
-
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public Animal[] getAnimals() {
+        return animals;
+    }
+
+    public void setAnimals(Animal[] animals) {
+        this.animals = animals;
+    }
+
+    public int getComptAnimaux() {
+        return comptAnimaux;
+    }
+
+    public void setComptAnimaux(int comptAnimaux) {
+        this.comptAnimaux = comptAnimaux;
+    }
+
 
     public void displayZoo(){
         System.out.println("Zoo name: " + this.name + "\n" + "ville: " + this.city + "\n"
@@ -52,7 +87,7 @@ public class Zoo {
 
     public int searchAnimal(Animal animal){
         for(int i = 0; i < comptAnimaux; i++){
-            if(animals[i].name.equals(animal.name)){
+            if(animals[i].getName().equals(animal.getName())){
                 return i;
             }
         }

@@ -59,6 +59,20 @@ public class Zoo {
         return -1;
     }
 
+    public boolean removeAnimal(Animal animal){
+        int index = searchAnimal(animal);
+        if(index == -1){
+            return false;
+        }
+
+        for(int i = index; i < comptAnimaux- 1 ;i++){
+            animals[i] = animals[i+1];
+        }
+        animals[comptAnimaux-1] = null;
+        comptAnimaux--;
+        return true;
+    }
+
 
 
 

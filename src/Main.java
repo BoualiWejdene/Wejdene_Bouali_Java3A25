@@ -26,6 +26,9 @@ public class Main {
         //Instruction 12
         System.out.println(myZoo.addAnimal(elephant));
 
+        //Instruction 13
+        System.out.println(myZoo.removeAnimal(lion));
+        myZoo.displayAnimals();
 
 
     }

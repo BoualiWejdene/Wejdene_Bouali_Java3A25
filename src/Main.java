@@ -6,6 +6,7 @@ public class Main {
         Animal girafe  = new Animal("Herbivore", "Girafe", 10, true);
 
         Zoo myZoo= new Zoo("Zoo de tunis","tunis");
+        Zoo myZoo2= new Zoo("Zoo de Sousse","sousse");
         myZoo.displayZoo();
         System.out.println(myZoo);
         System.out.println(myZoo.toString());
@@ -33,6 +34,8 @@ public class Main {
         //Instruction 15
         System.out.println(myZoo.isZooFull());
 
+        //Instruction 16
+        System.out.println(Zoo.comparerZoo(myZoo,myZoo2));
 
     }
 }

@@ -77,7 +77,12 @@ public class Zoo {
         return comptAnimaux >= NBR_CAGES;
     }
 
+    public static Zoo comparerZoo(Zoo z1, Zoo z2){
+        if(z1.comptAnimaux > z2.comptAnimaux)
+            return z1;
 
+        return z2;
+    }
 
 
 }

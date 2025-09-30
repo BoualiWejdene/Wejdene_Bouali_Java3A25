@@ -29,15 +29,15 @@ public class Zoo {
     }
 
     public boolean addAnimal(Animal animal){
+        if(isZooFull()) {
+            System.out.println("Zoo is full");
+            return false;
+        }
         if (searchAnimal(animal) != -1) {
             System.out.println("Animal déja existe dans le zoo");
             return false;
         }
 
-        if (comptAnimaux >= NBR_CAGES) {
-            System.out.println("Le zoo est plein");
-            return false;
-        }
         animals[comptAnimaux] = animal;
         comptAnimaux++;
         return true;

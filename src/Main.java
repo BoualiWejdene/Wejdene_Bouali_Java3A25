@@ -23,6 +23,9 @@ public class Main {
         Animal girafe2  = new Animal("Herbivore", "Girafe", 10, true);
         System.out.println(myZoo.searchAnimal(girafe2));
 
+        //Instruction 12
+        System.out.println(myZoo.addAnimal(elephant));
+
 
 
     }

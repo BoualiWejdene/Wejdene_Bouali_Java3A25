@@ -29,13 +29,18 @@ public class Zoo {
     }
 
     public boolean addAnimal(Animal animal){
-        if(comptAnimaux < animals.length){
-            animals[comptAnimaux] = animal;
-            comptAnimaux++;
-            return true;
-        }else {
+        if (searchAnimal(animal) != -1) {
+            System.out.println("Animal déja existe dans le zoo");
             return false;
         }
+
+        if (comptAnimaux >= animals.length) {
+            System.out.println("Le zoo est plein");
+            return false;
+        }
+        animals[comptAnimaux] = animal;
+        comptAnimaux++;
+        return true;
     }
 
     public void displayAnimals(){

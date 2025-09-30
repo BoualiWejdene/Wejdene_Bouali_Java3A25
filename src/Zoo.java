@@ -2,7 +2,7 @@ public class Zoo {
     Animal[] animals;
     String name;
     String city;
-    static final int NBRCAGES = 1;
+    static final int NBRCAGES = 25;
     int animalCount;
 
     public Zoo() {
@@ -30,21 +30,20 @@ public class Zoo {
     }
 
     public boolean addAnimal(Animal animal){
-        if(animalCount >= NBRCAGES){
-            System.out.println("Zoo over");
+        if(this.isZooFull()){
             return false;
-        }
-
-        for(int i = 0; i < animalCount; i++){
-            if(animals[i].name.equals(animal.name)){
-                System.out.println("cet animal existe déjà");
-                return false;
+        }else{
+            for(int i = 0; i < animalCount; i++){
+                if(animals[i].name.equals(animal.name)){
+                    System.out.println("cet animal existe déjà");
+                    return false;
+                }
             }
+            animals[animalCount] = animal;
+            animalCount++;
+            System.out.println("animal ajouté au zoo");
+            return true;
         }
-        animals[animalCount] = animal;
-        animalCount++;
-        System.out.println("animal ajouté au zoo");
-        return true;
     }
 
     public void displayAnimals(){

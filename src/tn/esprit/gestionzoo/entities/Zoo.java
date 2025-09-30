@@ -1,3 +1,5 @@
+package tn.esprit.gestionzoo.entities;
+
 public class Zoo {
     private Animal[] animals;
     private String name;
@@ -10,7 +12,7 @@ public class Zoo {
 
     }
 
-    public Zoo(String name,String city) {
+    public Zoo(String name, String city) {
         if (! name.isEmpty()){
             this.name = name;
         }else {

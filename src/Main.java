@@ -5,7 +5,7 @@ public class Main {
         Animal elephant = new Animal("Dumbo", "éléphant", 10,true);
         Animal girafe  = new Animal("Herbivore", "Girafe", 10, true);
 
-        Zoo myZoo= new Zoo("Zoo de tunis","tunis",20);
+        Zoo myZoo= new Zoo("Zoo de tunis","tunis");
         myZoo.displayZoo();
         System.out.println(myZoo);
         System.out.println(myZoo.toString());

@@ -3,6 +3,7 @@ public class Zoo {
     String name;
     String city;
     int nbrCages;
+    int comptAnimaux;
 
     public Zoo() {
         animals = new Animal[25];
@@ -27,6 +28,14 @@ public class Zoo {
         return "zoo: name: " + name + ", city: " + city + ", nbr cages: " + nbrCages;
     }
 
-
+    public boolean addAnimal(Animal animal){
+        if(comptAnimaux < animals.length){
+            animals[comptAnimaux] = animal;
+            comptAnimaux++;
+            return true;
+        }else {
+            return false;
+        }
+    }
 
 }

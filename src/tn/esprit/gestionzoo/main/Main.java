@@ -57,5 +57,12 @@ public class Main {
         System.out.println(p1);
         System.out.println(t1);
 
+        //Instruction 24
+        Aquatic a1 = new Aquatic("Poisson", "p1", 2, false, "habitat");
+        a1.swim();
+        d1.swim();
+        p1.swim();
+
+
     }
 }

@@ -1,7 +1,6 @@
 package tn.esprit.gestionzoo.main;
 
-import tn.esprit.gestionzoo.entities.Animal;
-import tn.esprit.gestionzoo.entities.Zoo;
+import tn.esprit.gestionzoo.entities.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -41,6 +40,14 @@ public class Main {
 
         //Instruction 16
         System.out.println(Zoo.comparerZoo(myZoo,myZoo2));
+
+        //Instruction 21
+        System.out.println("Instruction 21");
+        Aquatic animalAquatic = new Aquatic();
+        Terrestrial animalTerrestrial = new Terrestrial();
+        Dolphin d = new Dolphin();
+        Penguin p = new Penguin();
+
 
     }
 }

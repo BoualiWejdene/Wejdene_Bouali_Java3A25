@@ -12,4 +12,9 @@ public class Aquatic extends Animal{
         super(family, name, age, isMammal);
         this.habitat = habitat;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", habitat='" + habitat ;
+    }
 }

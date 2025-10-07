@@ -52,5 +52,10 @@ public class Main {
         Penguin p1 = new Penguin("Penguin", "p2", 3, false, "habitat", 4.2f);
 
 
+        Terrestrial t1 = new Terrestrial("f1", "Chien", 2, true, 4);
+        System.out.println(d1);
+        System.out.println(p1);
+        System.out.println(t1);
+
     }
 }

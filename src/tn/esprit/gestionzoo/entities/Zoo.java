@@ -13,11 +13,7 @@ public class Zoo {
     }
 
     public Zoo(String name, String city) {
-        if (! name.isEmpty()){
-            this.name = name;
-        }else {
-            this.name = "ZooNom";
-        }
+        setName(name);
         this.city = city;
         this.animals = new Animal[NBR_CAGES];
     }
@@ -27,7 +23,11 @@ public class Zoo {
     }
 
     public void setName(String name) {
-        this.name = name;
+        if (! name.isEmpty()){
+            this.name = name;
+        }else {
+            System.out.println("Le nom ne doit pas etre vide");
+        }
     }
 
     public String getCity() {

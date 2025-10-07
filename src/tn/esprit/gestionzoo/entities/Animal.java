@@ -13,13 +13,9 @@ public class Animal {
     public Animal(String family, String name, int age, boolean isMammal) {
         this.family = family;
         this.name = name;
-        if (age >=0 ){
-            this.age = age;
-
-        }else{
-            this.age = 0;
-        }
+        setAge(age);
         this.isMammal = isMammal;
+
     }
 
     public String getFamily() {
@@ -43,7 +39,12 @@ public class Animal {
     }
 
     public void setAge(int age) {
-        this.age = age;
+        if (age >=0 ){
+            this.age = age;
+
+        }else{
+            System.out.println("l'age ne doit pas etre négatif ");
+        }
     }
 
     public boolean isMammal() {

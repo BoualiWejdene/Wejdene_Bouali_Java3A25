@@ -48,6 +48,9 @@ public class Main {
         Dolphin d = new Dolphin();
         Penguin p = new Penguin();
 
+        Dolphin d1 = new Dolphin("dolphin", "d1", 5, true, "habitat", 25.5f);
+        Penguin p1 = new Penguin("Penguin", "p2", 3, false, "habitat", 4.2f);
+
 
     }
 }

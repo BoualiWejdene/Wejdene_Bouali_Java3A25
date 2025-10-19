@@ -89,8 +89,11 @@ public class Main {
         dauphin.swim();
         pingouin.swim();
 
-
-
+        //Instruction 29
+        System.out.println("Instruction 29");
+        Penguin pingouin2 = new Penguin("family2", "Pingu", 3, false, "Océan", 40.2f);
+        myZoo3.addAquaticAnimal(pingouin2);
+        System.out.println("Profondeur max des pingouins : " + myZoo3.maxPenguinSwimmingDepth());
 
     }
 }

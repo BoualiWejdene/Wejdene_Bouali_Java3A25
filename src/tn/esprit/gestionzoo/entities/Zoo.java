@@ -154,5 +154,20 @@ public class Zoo {
 
     }
 
+    public float maxPenguinSwimmingDepth(){
+        float maxSwimmingDepth = 0.0f;
+        for(int i = 0; i < aquaticCount; i++){
+            if(aquaticAnimals[i] instanceof  Penguin){
+                Penguin p = (Penguin) aquaticAnimals[i];
+                if(p.swimmingDepth  > maxSwimmingDepth){
+                    maxSwimmingDepth = p.swimmingDepth;
+                }
+
+            }
+        }
+        return maxSwimmingDepth;
+
+    }
+
 
 }

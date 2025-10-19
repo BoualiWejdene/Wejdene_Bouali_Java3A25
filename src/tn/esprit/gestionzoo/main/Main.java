@@ -95,5 +95,9 @@ public class Main {
         myZoo3.addAquaticAnimal(pingouin2);
         System.out.println("Profondeur max des pingouins : " + myZoo3.maxPenguinSwimmingDepth());
 
+        //Instruction 30
+        System.out.println("Instruction 30");
+        myZoo3.displayNumberOfAquaticsByType();
+
     }
 }

@@ -169,5 +169,19 @@ public class Zoo {
 
     }
 
+    public void displayNumberOfAquaticsByType(){
+        int nbrdolphin = 0;
+        int nbrpenguin = 0;
+        for(int i = 0; i < aquaticCount; i++){
+            if(aquaticAnimals[i] instanceof  Dolphin){
+                nbrdolphin++;
+            } else if (aquaticAnimals[i] instanceof  Penguin){
+                nbrpenguin++;
+            }
+        }
+        System.out.println("Nombre de dauphins : " + nbrdolphin);
+        System.out.println("Nombre de pingouins : " + nbrpenguin);
+    }
+
 
 }

@@ -67,6 +67,14 @@ public class Main {
         Zoo myZoo3 = new Zoo("Zoo3 ", "Tunis");
         System.out.println("Le zoo a été créé");
 
+        //Instruction 26
+        Aquatic poisson = new Aquatic("Poisson", "Nemo", 2, false, "Océan");
+        Dolphin dauphin = new Dolphin("family2", "d1", 6, true, "Océan", 22.4f);
+        Penguin pingouin = new Penguin("family3", "p1", 3, false, "Océan", 30.2f);
+
+        myZoo3.addAquaticAnimal(poisson);
+        myZoo3.addAquaticAnimal(dauphin);
+        myZoo3.addAquaticAnimal(pingouin);
 
     }
 }

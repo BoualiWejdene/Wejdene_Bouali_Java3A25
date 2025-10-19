@@ -43,7 +43,7 @@ public class Main {
 
         //Instruction 21
         System.out.println("Instruction 21");
-        Aquatic animalAquatic = new Aquatic();
+//        Aquatic animalAquatic = new Aquatic();
         Terrestrial animalTerrestrial = new Terrestrial();
         Dolphin d = new Dolphin();
         Penguin p = new Penguin();
@@ -58,15 +58,42 @@ public class Main {
         System.out.println(t1);
 
         //Instruction 24
-        Aquatic a1 = new Aquatic("Poisson", "p1", 2, false, "habitat");
-        a1.swim();
-        d1.swim();
-        p1.swim();
+//        Aquatic a1 = new Aquatic("Poisson", "p1", 2, false, "habitat");
+//        a1.swim();
+//        d1.swim();
+//        p1.swim();
 
         //Instruction 25
+        System.out.println("Instruction 25");
         Zoo myZoo3 = new Zoo("Zoo3 ", "Tunis");
         System.out.println("Le zoo a été créé");
 
+        //Instruction 26
+        System.out.println("Instruction 26");
+//        Aquatic poisson = new Aquatic("Poisson", "Nemo", 2, false, "Océan");
+        Dolphin dauphin = new Dolphin("family2", "d1", 6, true, "Océan", 22.4f);
+        Penguin pingouin = new Penguin("family3", "p1", 3, false, "Océan", 30.2f);
+
+//        myZoo3.addAquaticAnimal(poisson);
+        myZoo3.addAquaticAnimal(dauphin);
+        myZoo3.addAquaticAnimal(pingouin);
+
+        //Instruction 27
+        System.out.println("Instruction 27");
+//        poisson.swim();
+        dauphin.swim();
+        pingouin.swim();
+
+        //Instruction 28
+        System.out.println("Instruction 28");
+        dauphin.swim();
+        pingouin.swim();
+
+        //Instruction 29
+        System.out.println("Instruction 29");
+        Penguin pingouin2 = new Penguin("family2", "Pingu", 3, false, "Océan", 40.2f);
+        myZoo3.addAquaticAnimal(pingouin2);
+        System.out.println("Profondeur max des pingouins : " + myZoo3.maxPenguinSwimmingDepth());
 
     }
 }

@@ -9,6 +9,7 @@ public class Zoo {
     private String name;
     private String city;
     private int comptAnimaux;
+    private int aquaticCount;
 
     public Zoo() {
         animals = new Animal[NBR_CAGES];
@@ -59,10 +60,26 @@ public class Zoo {
         this.comptAnimaux = comptAnimaux;
     }
 
+    public int getAquaticCount() {
+        return aquaticCount;
+    }
+
+    public void setAquaticCount(int aquaticCount) {
+        this.aquaticCount = aquaticCount;
+    }
+
+    public Aquatic[] getAquaticAnimals() {
+        return aquaticAnimals;
+    }
+
+    public void setAquaticAnimals(Aquatic[] aquaticAnimals) {
+        this.aquaticAnimals = aquaticAnimals;
+    }
 
     public void displayZoo(){
         System.out.println("Zoo name: " + this.name + "\n" + "ville: " + this.city + "\n"
-                + "nbr cages: " + NBR_CAGES);
+                + "nbr animaux: " + comptAnimaux  + "\n"
+                + "nbr animaux aquatiques: " + aquaticCount);
     }
 
     @Override
@@ -124,6 +141,32 @@ public class Zoo {
             return z1;
 
         return z2;
+    }
+
+    public void addAquaticAnimal(Aquatic aquatic){
+        if(aquaticCount < MAX_AQUATICS){
+            aquaticAnimals[aquaticCount] = aquatic;
+            aquaticCount++;
+            System.out.println(aquatic.name + " a été ajouté  avec succés au zoo");
+        }else{
+            System.out.println("Impossible d'ajouter " +  aquatic.name);
+        }
+
+    }
+
+    public float maxPenguinSwimmingDepth(){
+        float maxSwimmingDepth = 0.0f;
+        for(int i = 0; i < aquaticCount; i++){
+            if(aquaticAnimals[i] instanceof  Penguin){
+                Penguin p = (Penguin) aquaticAnimals[i];
+                if(p.swimmingDepth  > maxSwimmingDepth){
+                    maxSwimmingDepth = p.swimmingDepth;
+                }
+
+            }
+        }
+        return maxSwimmingDepth;
+
     }
 
 

@@ -63,6 +63,10 @@ public class Main {
         d1.swim();
         p1.swim();
 
+        //Instruction 25
+        Zoo myZoo3 = new Zoo("Zoo3 ", "Tunis");
+        System.out.println("Le zoo a été créé");
+
 
     }
 }

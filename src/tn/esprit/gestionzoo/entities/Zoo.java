@@ -1,14 +1,18 @@
 package tn.esprit.gestionzoo.entities;
 
 public class Zoo {
+    private static final int NBR_CAGES = 25;
+    private static final int MAX_AQUATICS = 10;
+
     private Animal[] animals;
+    private Aquatic[] aquaticAnimals;
     private String name;
     private String city;
-    static final int NBR_CAGES = 25;
     private int comptAnimaux;
 
     public Zoo() {
         animals = new Animal[NBR_CAGES];
+        aquaticAnimals = new Aquatic[MAX_AQUATICS];
 
     }
 
@@ -16,6 +20,7 @@ public class Zoo {
         setName(name);
         this.city = city;
         this.animals = new Animal[NBR_CAGES];
+        this.aquaticAnimals = new Aquatic[MAX_AQUATICS];
     }
 
     public String getName() {

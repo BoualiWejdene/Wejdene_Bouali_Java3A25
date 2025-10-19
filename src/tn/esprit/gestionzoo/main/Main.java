@@ -64,10 +64,12 @@ public class Main {
         p1.swim();
 
         //Instruction 25
+        System.out.println("Instruction 25");
         Zoo myZoo3 = new Zoo("Zoo3 ", "Tunis");
         System.out.println("Le zoo a été créé");
 
         //Instruction 26
+        System.out.println("Instruction 26");
         Aquatic poisson = new Aquatic("Poisson", "Nemo", 2, false, "Océan");
         Dolphin dauphin = new Dolphin("family2", "d1", 6, true, "Océan", 22.4f);
         Penguin pingouin = new Penguin("family3", "p1", 3, false, "Océan", 30.2f);
@@ -75,6 +77,14 @@ public class Main {
         myZoo3.addAquaticAnimal(poisson);
         myZoo3.addAquaticAnimal(dauphin);
         myZoo3.addAquaticAnimal(pingouin);
+
+        //Instruction 27
+        System.out.println("Instruction 27");
+        poisson.swim();
+        dauphin.swim();
+        pingouin.swim();
+
+
 
     }
 }

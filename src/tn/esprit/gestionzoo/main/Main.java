@@ -95,5 +95,19 @@ public class Main {
         myZoo3.addAquaticAnimal(pingouin2);
         System.out.println("Profondeur max des pingouins : " + myZoo3.maxPenguinSwimmingDepth());
 
+        //Instruction 30
+        System.out.println("Instruction 30");
+        myZoo3.displayNumberOfAquaticsByType();
+
+        //Instruction 31
+        System.out.println("Instruction 31");
+        Aquatic a1 = new Dolphin("family1", "d", 5, true, "Océan", 25.0f);
+        Aquatic a2 = new Dolphin("family1", "d", 5, true, "Océan", 30.0f);
+        Aquatic a3 = new Penguin("family1", "Pingu", 3, false, "Océan", 40.0f);
+        Aquatic a4 = new Dolphin("family1", "d", 2, true, "Océan", 25.0f);
+        System.out.println(a1.equals(a2));
+        System.out.println(a1.equals(a4));
+        System.out.println(a1.equals(a3));
+
     }
 }

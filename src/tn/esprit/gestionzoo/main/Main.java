@@ -109,5 +109,21 @@ public class Main {
         System.out.println(a1.equals(a4));
         System.out.println(a1.equals(a3));
 
+
+        //Exercice Exception
+
+        System.out.println("main:start");
+        try{
+            try {
+                int a =10 / 0;
+            }
+            finally {
+                System.out.println("inner try : finally");
+            }
+        }catch(Exception e){
+            System.out.println("outer try : Exception");
+        }
+        System.out.println("main : end");
+
     }
 }

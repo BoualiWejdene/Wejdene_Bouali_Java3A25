@@ -87,7 +87,7 @@ public class Zoo {
         return "zoo: name: " + name + ", city: " + city + ", nbr cages: " + NBR_CAGES;
     }
 
-    public void addAnimal(Animal animal) throws ZooFullException {
+    public void addAnimal(Animal animal) throws ZooFullException,InvalidAgeException {
         if (comptAnimaux >= NBR_CAGES) {
             throw new ZooFullException("Le zoo est plein, impossible d’ajouter un nouvel animal" );
         }
@@ -95,6 +95,10 @@ public class Zoo {
         if (searchAnimal(animal) != -1) {
             System.out.println("Animal déja existe dans le zoo");
 
+        }
+
+        if (animal.getAge() <= 0) {
+            throw new InvalidAgeException("Âge d’animal invalide : l’âge ne peut pas être négatif.");
         }
 
         animals[comptAnimaux] = animal;

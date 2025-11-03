@@ -130,15 +130,20 @@ public class Main {
 //        myZoo3.addAnimal(pingouin2);
 //        myZoo3.addAnimal(dauphin);
 
-        //Instruction 33
-        System.out.println("Instruction 33");
+        //Instruction 34
+        System.out.println("Instruction 34");
         try {
             myZoo3.addAnimal(dauphin);
+            myZoo3.addAnimal(new Animal("famille3", "Oiseau", -2, false));
             myZoo3.addAnimal(pingouin2);
             myZoo3.addAnimal(pingouin);
             myZoo3.addAnimal(p1);
+        } catch (InvalidAgeException e) {
+            System.out.println("Erreur : " + e.getMessage());
         } catch (ZooFullException e) {
-            System.out.println(e.getMessage());
+            System.out.println("Erreur : " + e.getMessage());
+        } finally {
+            System.out.println("Nombre d'animaux dans le zoo : " + myZoo3.getComptAnimaux());
         }
 
     }

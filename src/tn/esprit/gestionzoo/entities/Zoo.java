@@ -1,7 +1,7 @@
 package tn.esprit.gestionzoo.entities;
 
 public class Zoo {
-    private static final int NBR_CAGES = 25;
+    private static final int NBR_CAGES = 3;
     private static final int MAX_AQUATICS = 10;
 
     private Animal[] animals;
@@ -87,19 +87,23 @@ public class Zoo {
         return "zoo: name: " + name + ", city: " + city + ", nbr cages: " + NBR_CAGES;
     }
 
-    public boolean addAnimal(Animal animal){
-        if(isZooFull()) {
-            System.out.println("Zoo is full");
-            return false;
+    public void addAnimal(Animal animal) throws ZooFullException,InvalidAgeException {
+        if (comptAnimaux >= NBR_CAGES) {
+            throw new ZooFullException("Le zoo est plein, impossible d’ajouter un nouvel animal" );
         }
+
         if (searchAnimal(animal) != -1) {
             System.out.println("Animal déja existe dans le zoo");
-            return false;
+
+        }
+
+        if (animal.getAge() <= 0) {
+            throw new InvalidAgeException("Âge d’animal invalide : l’âge ne peut pas être négatif.");
         }
 
         animals[comptAnimaux] = animal;
         comptAnimaux++;
-        return true;
+        System.out.println(animal.name + " ajouté avec succès!");
     }
 
     public void displayAnimals(){

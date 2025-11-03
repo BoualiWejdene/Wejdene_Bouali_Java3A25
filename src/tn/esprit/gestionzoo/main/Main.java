@@ -18,9 +18,9 @@ public class Main {
         System.out.println(lion);
 
         //Instruction 10
-        System.out.println(myZoo.addAnimal(lion));
-        System.out.println(myZoo.addAnimal(girafe));
-        System.out.println(myZoo.addAnimal(elephant));
+//        System.out.println(myZoo.addAnimal(lion));
+//        System.out.println(myZoo.addAnimal(girafe));
+//        System.out.println(myZoo.addAnimal(elephant));
 
         //Instruction 11
         myZoo.displayAnimals();
@@ -29,7 +29,7 @@ public class Main {
         System.out.println(myZoo.searchAnimal(girafe2));
 
         //Instruction 12
-        System.out.println(myZoo.addAnimal(elephant));
+//        System.out.println(myZoo.addAnimal(elephant));
 
         //Instruction 13
         System.out.println(myZoo.removeAnimal(lion));
@@ -108,6 +108,43 @@ public class Main {
         System.out.println(a1.equals(a2));
         System.out.println(a1.equals(a4));
         System.out.println(a1.equals(a3));
+
+
+        //Exercice Exception
+
+        System.out.println("main:start");
+        try{
+            try {
+                int a =10 / 0;
+            }
+            finally {
+                System.out.println("inner try : finally");
+            }
+        }catch(Exception e){
+            System.out.println("outer try : Exception");
+        }
+        System.out.println("main : end");
+
+        //Instruction 32
+        System.out.println("Instruction 32");
+//        myZoo3.addAnimal(pingouin2);
+//        myZoo3.addAnimal(dauphin);
+
+        //Instruction 34
+        System.out.println("Instruction 34");
+        try {
+            myZoo3.addAnimal(dauphin);
+            myZoo3.addAnimal(new Animal("famille3", "Oiseau", -2, false));
+            myZoo3.addAnimal(pingouin2);
+            myZoo3.addAnimal(pingouin);
+            myZoo3.addAnimal(p1);
+        } catch (InvalidAgeException e) {
+            System.out.println("Erreur : " + e.getMessage());
+        } catch (ZooFullException e) {
+            System.out.println("Erreur : " + e.getMessage());
+        } finally {
+            System.out.println("Nombre d'animaux dans le zoo : " + myZoo3.getComptAnimaux());
+        }
 
     }
 }

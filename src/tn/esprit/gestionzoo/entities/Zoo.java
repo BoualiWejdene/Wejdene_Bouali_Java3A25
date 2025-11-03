@@ -87,19 +87,19 @@ public class Zoo {
         return "zoo: name: " + name + ", city: " + city + ", nbr cages: " + NBR_CAGES;
     }
 
-    public boolean addAnimal(Animal animal){
-        if(isZooFull()) {
-            System.out.println("Zoo is full");
-            return false;
+    public void addAnimal(Animal animal){
+        if (isZooFull()) {
+            System.out.println("Le zoo est plein, impossible d'ajouter : " + animal.name);
+
         }
         if (searchAnimal(animal) != -1) {
             System.out.println("Animal déja existe dans le zoo");
-            return false;
+
         }
 
         animals[comptAnimaux] = animal;
         comptAnimaux++;
-        return true;
+        System.out.println(animal.name + " ajouté avec succès!");
     }
 
     public void displayAnimals(){

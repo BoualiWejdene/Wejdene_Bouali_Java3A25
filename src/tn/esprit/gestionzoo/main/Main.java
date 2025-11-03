@@ -18,9 +18,9 @@ public class Main {
         System.out.println(lion);
 
         //Instruction 10
-        System.out.println(myZoo.addAnimal(lion));
-        System.out.println(myZoo.addAnimal(girafe));
-        System.out.println(myZoo.addAnimal(elephant));
+//        System.out.println(myZoo.addAnimal(lion));
+//        System.out.println(myZoo.addAnimal(girafe));
+//        System.out.println(myZoo.addAnimal(elephant));
 
         //Instruction 11
         myZoo.displayAnimals();
@@ -29,7 +29,7 @@ public class Main {
         System.out.println(myZoo.searchAnimal(girafe2));
 
         //Instruction 12
-        System.out.println(myZoo.addAnimal(elephant));
+//        System.out.println(myZoo.addAnimal(elephant));
 
         //Instruction 13
         System.out.println(myZoo.removeAnimal(lion));
@@ -124,6 +124,11 @@ public class Main {
             System.out.println("outer try : Exception");
         }
         System.out.println("main : end");
+
+        //Instruction 32
+        System.out.println("Instruction 32");
+        myZoo3.addAnimal(pingouin2);
+        myZoo3.addAnimal(dauphin);
 
     }
 }

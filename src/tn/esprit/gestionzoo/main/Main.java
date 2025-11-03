@@ -127,8 +127,19 @@ public class Main {
 
         //Instruction 32
         System.out.println("Instruction 32");
-        myZoo3.addAnimal(pingouin2);
-        myZoo3.addAnimal(dauphin);
+//        myZoo3.addAnimal(pingouin2);
+//        myZoo3.addAnimal(dauphin);
+
+        //Instruction 33
+        System.out.println("Instruction 33");
+        try {
+            myZoo3.addAnimal(dauphin);
+            myZoo3.addAnimal(pingouin2);
+            myZoo3.addAnimal(pingouin);
+            myZoo3.addAnimal(p1);
+        } catch (ZooFullException e) {
+            System.out.println(e.getMessage());
+        }
 
     }
 }

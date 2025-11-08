@@ -27,8 +27,11 @@ public class GestionEmployes {
         System.out.println(societe.rechercherEmploye("Dupont"));
         System.out.println(societe.rechercherEmploye(e1));
 
+        System.out.println("Suppression :");
         societe.supprimerEmploye(e1);
         societe.displayEmploye();
 
+        System.out.println("Recherche par département :");
+        System.out.println(societe.rechercherParDepartement("IT"));
     }
 }

@@ -1,12 +1,13 @@
 package tn.esprit.gestionzoo.entities;
 
 import tn.esprit.gestionzoo.interfaces.IGestion;
+import tn.esprit.gestionzoo.interfaces.IRechercheAvancee;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class SocieteArrayList implements IGestion<Employe> {
+public class SocieteArrayList implements IGestion<Employe>, IRechercheAvancee<Employe> {
     private List<Employe> employes = new ArrayList<>();
 
     @Override
@@ -50,5 +51,17 @@ public class SocieteArrayList implements IGestion<Employe> {
     @Override
     public void trierEmployeParNomDepartementEtGrade() {
         employes.sort(new EmployeComparator());
+    }
+
+    @Override
+    public List<Employe> rechercherParDepartement(String nomDepartement) {
+        List<Employe> l = new ArrayList<>();
+        for (Employe e : employes) {
+            if (e.getNomDepartement().equals(nomDepartement)) {
+                l.add(e);
+            }
+        }
+        return l;
+
     }
 }

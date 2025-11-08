@@ -7,5 +7,5 @@ public interface IGestion<T>{
     void supprimerEmploye(T t);
     void displayEmploye();
     void trierEmployeParId();
-    void trierEmployeParNomDépartementEtGrade();
+    void trierEmployeParNomDepartementEtGrade();
 }

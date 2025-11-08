@@ -1,6 +1,8 @@
 package tn.esprit.gestionzoo.entities;
 
-public class Employe {
+import java.util.Objects;
+
+public class Employe implements Comparable<Employe> {
     private int id;
     private String nom;
     private String prenom;
@@ -68,4 +70,17 @@ public class Employe {
                 ", grade=" + grade +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Employe employe = (Employe) o;
+        return Objects.equals(nom, employe.nom) ;
+    }
+
+    @Override
+    public int compareTo(Employe e) {
+        return Integer.compare(this.id, e.id);
+    }
+
 }

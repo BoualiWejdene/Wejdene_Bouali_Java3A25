@@ -72,4 +72,16 @@ public class SocieteArrayList implements IGestion<Employe>, IRechercheAvancee<Em
         }
         return l;
     }
+
+    @Override
+    public List<Employe> rechercherParDepartement(String nomDepartement) {
+        List<Employe> l = new ArrayList<>();
+        for (Employe e : employes) {
+            if (e.getNomDepartement().equals(nomDepartement)) {
+                l.add(e);
+            }
+        }
+        return l;
+
+    }
 }

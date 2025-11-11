@@ -1,13 +1,18 @@
 package tn.esprit.gestionzoo.entities;
 
 import tn.esprit.gestionzoo.interfaces.IGestion;
+import tn.esprit.gestionzoo.interfaces.IRechercheAvancee;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class SocieteArrayList implements IGestion<Employe> {
-    private List<Employe> employes = new ArrayList<>();
+public class SocieteArrayList implements IGestion<Employe>, IRechercheAvancee<Employe> {
+    private List<Employe> employes;
+
+    public SocieteArrayList() {
+        this.employes = new ArrayList();
+    }
 
     @Override
     public void ajouterEmploye(Employe employe) {
@@ -16,12 +21,18 @@ public class SocieteArrayList implements IGestion<Employe> {
 
     @Override
     public boolean rechercherEmploye(String nom) {
-        for (Employe e : employes) {
-            if (e.getNom().equals(nom)) {
+        for (int i = 0; i < employes.size(); i++) {
+            if(employes.get(i).getNom().equals(nom)){
                 return true;
             }
         }
         return false;
+//      for (Employe e : employes) {
+//            if (e.getNom().equals(nom)) {
+//                return true;
+//            }
+//        }
+//        return false;
     }
 
     @Override
@@ -36,10 +47,7 @@ public class SocieteArrayList implements IGestion<Employe> {
 
     @Override
     public void displayEmploye() {
-        for (Employe e : employes) {
-            System.out.println(e);
-        }
-
+        System.out.println(employes);
     }
 
     @Override
@@ -49,6 +57,19 @@ public class SocieteArrayList implements IGestion<Employe> {
 
     @Override
     public void trierEmployeParNomDepartementEtGrade() {
-        employes.sort(new EmployeComparator());
+        Collections.sort(employes,
+                new TriParNonDepartement()
+                .thenComparing(new TriParGrade()));
+    }
+
+    @Override
+    public List<Employe> rechercherParDepartement(String nomDepartement) {
+        List<Employe> l = new ArrayList<>();
+        for (Employe e : employes) {
+            if (e.getNomDepartement().equals(nomDepartement)) {
+                l.add(e);
+            }
+        }
+        return l;
     }
 }

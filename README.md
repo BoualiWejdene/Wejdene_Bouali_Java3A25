@@ -1,7 +1,12 @@
-# 🦁 Projet : Gestion de Zoo
+# Projet : 🐾 Gestion de Zoo & 🏢 Gestion d'Employés
 
 ## 📝 Description
-Ce projet a pour objectif de développer une application Java de **gestion de zoo**.  
+Ce projet est une application Java qui permet de gérer :
+
+**Les zoos et leurs animaux**
+ 
+**Les employés et leurs départements**
+  
 Il s’agit d’un projet académique visant à mettre en pratique les **principes de la programmation orientée objet (POO)**.
 
 ---

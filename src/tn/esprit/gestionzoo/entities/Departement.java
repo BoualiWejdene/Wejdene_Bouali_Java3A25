@@ -2,7 +2,7 @@ package tn.esprit.gestionzoo.entities;
 
 import java.util.Objects;
 
-public class Departement {
+public class Departement implements Comparable<Departement> {
     private int id;
     private String nomDepartement;
     private int nombreEmployes;
@@ -68,5 +68,10 @@ public class Departement {
                 ", nomDepartement='" + nomDepartement + '\'' +
                 ", nombreEmployes=" + nombreEmployes +
                 "}\n";
+    }
+
+    @Override
+    public int compareTo(Departement o) {
+        return this.id - o.id;
     }
 }

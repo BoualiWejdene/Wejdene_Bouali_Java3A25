@@ -1,5 +1,7 @@
 package tn.esprit.gestionzoo.main;
 
+import tn.esprit.gestionzoo.entities.Departement;
+import tn.esprit.gestionzoo.entities.DepartementHashSet;
 import tn.esprit.gestionzoo.entities.Employe;
 import tn.esprit.gestionzoo.entities.SocieteArrayList;
 
@@ -33,5 +35,39 @@ public class GestionEmployes {
 
         System.out.println("Recherche par département :");
         System.out.println(societe.rechercherParDepartement("IT"));
+
+
+        //Prosit 9
+        System.out.println("Prosit 9  :");
+        DepartementHashSet gestion = new DepartementHashSet();
+        Departement d1 = new Departement(3, "Informatique", 10);
+        Departement d2 = new Departement(1, "Ressources Humaines", 5);
+        Departement d3 = new Departement(2, "Finance", 7);
+        Departement d4 = new Departement(4, "Informatique", 15);
+
+        gestion.ajouterDepartement(d1);
+        gestion.ajouterDepartement(d2);
+        gestion.ajouterDepartement(d3);
+        gestion.ajouterDepartement(d4);
+
+        System.out.println("les départements : ");
+        gestion.afficherDepartements();
+
+        System.out.println("Recherche 'Finance' : " + gestion.rechercherDepartement("Finance"));
+        System.out.println("Recherche 'Marketing' : " + gestion.rechercherDepartement("Marketing"));
+
+        System.out.println("Recherche d1 : " + gestion.rechercherDepartement(d1));
+        System.out.println("Recherche d5 : " + gestion.rechercherDepartement(new Departement(5, "Marketing", 12)));
+
+        System.out.println("Suppression d3");
+        gestion.supprimerDepartement(d3);
+        gestion.afficherDepartements();
+
+        System.out.println("Tri par ID :");
+        gestion.trierDepartementsParId();
+
+        System.out.println("Tri par Nom puis Nombre Employés :");
+        gestion.trierDepartementsParNomEtNombreEmployes();
+
     }
 }

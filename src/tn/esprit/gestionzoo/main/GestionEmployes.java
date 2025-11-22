@@ -98,5 +98,8 @@ public class GestionEmployes {
 
         myMap.afficherDepartements();
 
+        System.out.println(myMap.rechercherEmploye(e1));
+
+
     }
 }

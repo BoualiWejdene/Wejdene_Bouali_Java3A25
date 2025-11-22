@@ -46,6 +46,10 @@ public class AffectationHashMap {
         return affectations.containsKey(e);
     }
 
+    public boolean rechercherDepartement(Departement d){
+        return affectations.containsValue(d);
+    }
+
 
 
 

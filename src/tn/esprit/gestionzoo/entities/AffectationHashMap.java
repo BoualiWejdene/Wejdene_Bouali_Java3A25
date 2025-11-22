@@ -10,4 +10,10 @@ public class AffectationHashMap {
         affectations = new HashMap<>();
     }
 
+    public void ajouterEmployeDepartement(Employe e, Departement d){
+        affectations.putIfAbsent(e, d);
+    }
+
+
+
 }

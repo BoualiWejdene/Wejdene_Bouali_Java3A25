@@ -14,6 +14,10 @@ public class AffectationHashMap {
         affectations.putIfAbsent(e, d);
     }
 
+    public void afficherEmployesEtDepartements(){
+        System.out.println(affectations);
+    }
+
 
 
 }

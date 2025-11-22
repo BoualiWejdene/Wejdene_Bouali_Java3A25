@@ -101,6 +101,9 @@ public class GestionEmployes {
         System.out.println(myMap.rechercherEmploye(e1));
         System.out.println(myMap.rechercherDepartement(d1));
 
+        //10.Tri des employés selon leur identifiant
+        System.out.println("Tri des employés selon leur identifiant");
+        System.out.println(myMap.trierMap());
 
     }
 }

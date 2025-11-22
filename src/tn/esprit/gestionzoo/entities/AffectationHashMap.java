@@ -50,6 +50,11 @@ public class AffectationHashMap {
         return affectations.containsValue(d);
     }
 
+    public TreeMap<Employe, Departement> trierMap() {
+        TreeMap<Employe, Departement> mymap = new TreeMap(affectations);
+        return mymap;
+    }
+
 
 
 

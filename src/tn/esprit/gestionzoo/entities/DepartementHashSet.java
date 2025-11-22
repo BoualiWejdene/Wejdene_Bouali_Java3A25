@@ -8,7 +8,7 @@ public class DepartementHashSet implements IDepartement<Departement> {
     private Set<Departement> departements;
 
     public DepartementHashSet() {
-        this.departements = new HashSet<>();
+        this.departements = new HashSet();
     }
 
     @Override
@@ -18,12 +18,20 @@ public class DepartementHashSet implements IDepartement<Departement> {
 
     @Override
     public boolean rechercherDepartement(String nomDepartement) {
+        // -1 ->0
+//        Iterator<Departement> it = departements.iterator();
+//        while (it.hasNext()) {
+//            if (nomDepartement.equals(it.next().getNomDepartement()))
+//                return true;
+//        }
+//        return false;
         for (Departement d : departements) {
             if (d.getNomDepartement().equals(nomDepartement))
                 return true;
         }
         return false;
     }
+
 
     @Override
     public boolean rechercherDepartement(Departement departement) {
@@ -32,31 +40,31 @@ public class DepartementHashSet implements IDepartement<Departement> {
 
     @Override
     public void supprimerDepartement(Departement departement) {
-        departements.remove(departement);
+        this.departements.remove(departement);
     }
 
     @Override
     public void afficherDepartements() {
-        System.out.println(departements);
+        System.out.println(this.departements);
     }
 
     @Override
     public void trierDepartementsParId() {
-        Set<Departement> myset = new TreeSet<>();
-        myset.addAll(departements);
-        for (Departement d : myset) {
-            System.out.println(d);
-        }
+        System.out.println(new TreeSet<>(departements));
     }
 
     @Override
     public void trierDepartementsParNomEtNombreEmployes() {
-        Set<Departement> s = new TreeSet<>(new DepartementcomparatorNom()
-                .thenComparing(new DepartementComparatorNombreEmployes()));
-
-        s.addAll(departements);
-        for (Departement d : s) {
-            System.out.println(d);
-        }
+        Set<Departement> s = new TreeSet<>(new Comparator<Departement>() {
+            @Override
+            public int compare(Departement o1, Departement o2) {
+                return o1.getNomDepartement().compareTo(o2.getNomDepartement());
+            }
+        }.thenComparing(new Comparator<Departement>() {
+            @Override
+            public int compare(Departement o1, Departement o2) {
+                return o1.getNombreEmployes() - o2.getNombreEmployes();
+            }
+        }));
     }
 }

@@ -21,6 +21,11 @@ public class AffectationHashMap {
     public void supprimerEmploye(Employe e){
         affectations.remove(e);
     }
+    public void supprimerEmployeEtDepartement(Employe e, Departement d){
+        if (affectations.containsKey(e) && affectations.get(e).equals(d)) {
+            affectations.remove(e);
+        }
+    }
 
 
 }

@@ -87,5 +87,8 @@ public class GestionEmployes {
         myMap.supprimerEmploye(e1);
         myMap.afficherEmployesEtDepartements();
 
+        myMap.supprimerEmployeEtDepartement(e2, d2);
+        myMap.afficherEmployesEtDepartements();
+
     }
 }

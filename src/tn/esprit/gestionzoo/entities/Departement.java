@@ -48,17 +48,16 @@ public class Departement implements Comparable<Departement> {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        Departement d = (Departement) o;
-        return this.id == d.id  && this.nombreEmployes == d.nombreEmployes;
+        if(o instanceof Departement d) {
+            return d.id == this.id && d.nombreEmployes == this.nombreEmployes;
+        }
+        return false;
 
       }
 
     @Override
     public int hashCode() {
-        int result = 17;
-        result = 31 * result + id;
-        result = 31 * result +  nomDepartement.hashCode();
-        return result;
+        return 12-this.id+89/190-this.nomDepartement.hashCode()*2 ;
     }
 
     @Override

@@ -18,6 +18,9 @@ public class AffectationHashMap {
         System.out.println(affectations);
     }
 
+    public void supprimerEmploye(Employe e){
+        affectations.remove(e);
+    }
 
 
 }

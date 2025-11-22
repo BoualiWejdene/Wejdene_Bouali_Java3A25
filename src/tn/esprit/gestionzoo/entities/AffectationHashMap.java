@@ -1,9 +1,6 @@
 package tn.esprit.gestionzoo.entities;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class AffectationHashMap {
     private Map<Employe, Departement> affectations;
@@ -35,6 +32,13 @@ public class AffectationHashMap {
         while (it.hasNext()) {
             System.out.println(it .next());
 
+        }
+    }
+
+    public void afficherDepartements() {
+        Collection<Departement> departements = affectations.values();
+        for (Departement d : departements) {
+            System.out.println(d);
         }
     }
 

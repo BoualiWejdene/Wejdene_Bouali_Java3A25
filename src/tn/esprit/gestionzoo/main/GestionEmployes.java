@@ -96,5 +96,7 @@ public class GestionEmployes {
 
         myMap.afficherEmployes();
 
+        myMap.afficherDepartements();
+
     }
 }

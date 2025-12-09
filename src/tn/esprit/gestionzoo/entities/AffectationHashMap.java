@@ -10,36 +10,32 @@ public class AffectationHashMap {
     }
 
     public void ajouterEmployeDepartement(Employe e, Departement d){
-        affectations.putIfAbsent(e, d);
+        affectations.put(e, d);
     }
 
     public void afficherEmployesEtDepartements(){
         System.out.println(affectations);
     }
 
+    //sarra
     public void supprimerEmploye(Employe e){
         affectations.remove(e);
     }
+
+    // Sarra Dev
     public void supprimerEmployeEtDepartement(Employe e, Departement d){
-        if (affectations.containsKey(e) && affectations.get(e).equals(d)) {
-            affectations.remove(e);
-        }
+            affectations.remove(e,d);
+
     }
 
     public void afficherEmployes(){
-        Set<Employe> myset = affectations.keySet();
-        Iterator<Employe> it = myset.iterator();
-        while (it.hasNext()) {
-            System.out.println(it .next());
+        System.out.println(affectations.keySet());
 
-        }
     }
 
     public void afficherDepartements() {
-        Collection<Departement> departements = affectations.values();
-        for (Departement d : departements) {
-            System.out.println(d);
-        }
+        System.out.println(affectations.values());
+
     }
 
     public boolean rechercherEmploye(Employe e){
@@ -51,12 +47,13 @@ public class AffectationHashMap {
     }
 
     public TreeMap<Employe, Departement> trierMap() {
-        TreeMap<Employe, Departement> mymap = new TreeMap(affectations);
-        return mymap;
+        return new TreeMap(affectations);
+//        Map<Employe, Departement> map = new TreeMap(new Comparator() {
+//            @Override
+//            public int compare(Object o1, Object o2) {
+//
+//            }
+//        });
     }
-
-
-
-
 
 }
